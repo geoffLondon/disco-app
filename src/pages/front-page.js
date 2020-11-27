@@ -1,9 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Header from '../components/header'
+import AddSong from '../components/add-song'
+import SongList from '../components/song-list'
+import SongPlayer from '../components/song-player'
 
 const FrontPage = () => {
   return <div>
-    <h1>Main</h1>
+    <Header/>
+    <AddSong/>
+    <SongList/>
+    <SongPlayer/>
   </div>
 }
 

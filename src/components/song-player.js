@@ -1,9 +1,11 @@
 import React from 'react'
+import QueuedSongList from './queued-song-list'
 
 const SongPlayer = () => {
   return (
     <div>
-      Song player
+      song player
+      <QueuedSongList />
     </div>
   )
 }

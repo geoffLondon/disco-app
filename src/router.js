@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import FrontPage from './src/pages/front-page'
+import FrontPage from './pages/front-page'
 
 const Router = () => (
   <BrowserRouter>

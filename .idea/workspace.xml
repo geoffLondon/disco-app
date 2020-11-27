@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8636478-80f9-4575-bf3e-80f8fd795f1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/add-song.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/song-list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/front-page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/development.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/add-song.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/add-song.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/song-player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song-player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/front-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/front-page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +29,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1ksrzuE0biqppX36j8bmAT16A6T" />
   <component name="ProjectLevelVcsManager">
@@ -45,14 +47,24 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/config" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/config" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Start" type="js.build_tools.npm">
@@ -72,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606500405336</updated>
       <workItem from="1606500406399" duration="160000" />
-      <workItem from="1606502953380" duration="1829000" />
+      <workItem from="1606502953380" duration="4945000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1606503125205</created>
@@ -88,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606503396340</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created new components.">
+      <created>1606507881928</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606507881928</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,7 +117,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First commit" />
     <MESSAGE value="Cleaned up project ready to use." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up project ready to use." />
+    <MESSAGE value="Created new components." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new components." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2338" y="342" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606503258521">
@@ -109,29 +129,33 @@
       <screen x="1920" y="144" width="1920" height="1080" />
     </state>
     <state x="2613" y="433" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606503227102" />
-    <state x="2445" y="249" width="860" height="876" key="CommitChangelistDialog2" timestamp="1606503396305">
+    <state x="2445" y="249" width="860" height="876" key="CommitChangelistDialog2" timestamp="1606507881876">
       <screen x="1920" y="144" width="1920" height="1080" />
     </state>
-    <state x="2445" y="249" width="860" height="876" key="CommitChangelistDialog2/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606503396305" />
-    <state width="1897" height="276" key="GridCell.Tab.0.bottom" timestamp="1606503589275">
+    <state x="2445" y="249" width="860" height="876" key="CommitChangelistDialog2/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606507881876" />
+    <state width="1897" height="226" key="GridCell.Tab.0.bottom" timestamp="1606510391543">
       <screen x="1920" y="144" width="1920" height="1080" />
     </state>
-    <state width="1897" height="276" key="GridCell.Tab.0.bottom/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606503589275" />
-    <state width="1897" height="276" key="GridCell.Tab.0.center" timestamp="1606503589274">
+    <state width="1897" height="226" key="GridCell.Tab.0.bottom/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606510391543" />
+    <state width="1897" height="226" key="GridCell.Tab.0.center" timestamp="1606510391543">
       <screen x="1920" y="144" width="1920" height="1080" />
     </state>
-    <state width="1897" height="276" key="GridCell.Tab.0.center/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606503589274" />
-    <state width="1897" height="276" key="GridCell.Tab.0.left" timestamp="1606503589274">
+    <state width="1897" height="226" key="GridCell.Tab.0.center/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606510391543" />
+    <state width="1897" height="226" key="GridCell.Tab.0.left" timestamp="1606510391543">
       <screen x="1920" y="144" width="1920" height="1080" />
     </state>
-    <state width="1897" height="276" key="GridCell.Tab.0.left/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606503589274" />
-    <state width="1897" height="276" key="GridCell.Tab.0.right" timestamp="1606503589275">
+    <state width="1897" height="226" key="GridCell.Tab.0.left/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606510391543" />
+    <state width="1897" height="226" key="GridCell.Tab.0.right" timestamp="1606510391543">
       <screen x="1920" y="144" width="1920" height="1080" />
     </state>
-    <state width="1897" height="276" key="GridCell.Tab.0.right/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606503589275" />
-    <state x="2475" y="420" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606503398148">
+    <state width="1897" height="226" key="GridCell.Tab.0.right/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606510391543" />
+    <state x="2475" y="420" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606507885418">
       <screen x="1920" y="144" width="1920" height="1080" />
     </state>
-    <state x="2475" y="420" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606503398148" />
+    <state x="2475" y="420" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606507885418" />
+    <state x="2661" y="599" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606507859539">
+      <screen x="1920" y="144" width="1920" height="1080" />
+    </state>
+    <state x="2661" y="599" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.989/3840.72.1920.1080/1920.144.1920.1080@1920.144.1920.1080" timestamp="1606507859539" />
   </component>
 </project>
