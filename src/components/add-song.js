@@ -1,11 +1,11 @@
 import React from 'react'
 
-const App = () => {
+const AddSong = () => {
   return (
     <div>
-      app
+      Add song
     </div>
   )
 }
 
-export default App
+export default AddSong
