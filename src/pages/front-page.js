@@ -1,20 +1,11 @@
 import React from 'react'
 import Header from '../components/header'
-import AddSong from '../components/add-song'
-import SongList from '../components/song-list'
-import SongPlayer from '../components/song-player'
-import { Grid, withStyles } from '@material-ui/core'
+import AddSong from '../components/song/add-song'
+import SongList from '../components/song/song-list'
+import SongPlayer from '../components/song/song-player'
+import { Grid } from '@material-ui/core'
 
-const styles = theme => ({
-  profileIcon: {
-    marginLeft: theme.spacing(1),
-  },
-  menu: {
-    marginTop: theme.spacing(5),
-  },
-})
-
-const FrontPage = () => {
+function FrontPage () {
   return <div>
     <Header/>
     <Grid container spacing={3}>
@@ -29,4 +20,4 @@ const FrontPage = () => {
   </div>
 }
 
-export default withStyles(styles)(FrontPage)
+export default FrontPage
