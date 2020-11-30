@@ -5,7 +5,8 @@ import { ApolloProvider } from 'react-apollo'
 import Router from './router'
 import AWSAppSyncClient, { createAppSyncLink } from 'aws-appsync'
 import { ApolloLink } from 'apollo-link'
-import theme from './theme/theme'
+import theme from './theme'
+import { CssBaseline } from '@material-ui/core'
 
 const client = new AWSAppSyncClient({
     //disableOffline: false,
@@ -26,7 +27,8 @@ const App = () => (
   <ApolloProvider client={client}>
     <ApolloHooksProvider client={client}>
       <MuiThemeProvider theme={theme}>
-          <Router/>
+        <CssBaseline/>
+        <Router/>
       </MuiThemeProvider>
     </ApolloHooksProvider>
   </ApolloProvider>

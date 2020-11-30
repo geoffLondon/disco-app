@@ -1,7 +1,10 @@
-import { createMuiTheme } from '@material-ui/core'
+import { createMuiTheme } from '@material-ui/core/styles'
 import { teal, purple } from '@material-ui/core/colors'
 
-const theme = createMuiTheme({
+const spacing = 8
+
+export default createMuiTheme({
+  spacing: spacing,
   palette: {
     type: 'dark',
     primary: teal,
@@ -9,4 +12,3 @@ const theme = createMuiTheme({
   }
 })
 
-export default theme
