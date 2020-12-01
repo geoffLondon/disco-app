@@ -3,25 +3,9 @@ import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
 import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks'
 import { ApolloProvider } from 'react-apollo'
 import Router from './router'
-import AWSAppSyncClient, { createAppSyncLink } from 'aws-appsync'
-import { ApolloLink } from 'apollo-link'
 import theme from './theme'
 import { CssBaseline } from '@material-ui/core'
-
-const client = new AWSAppSyncClient({
-    //disableOffline: false,
-    disableOffline: true,
-  },
-  {
-    link: ApolloLink.from([
-      createAppSyncLink({
-        url: '',
-        region: 'eu-west-2',
-        disableOffline: true,
-      }),
-    ]),
-  },
-)
+import { client } from './graphql/client'
 
 const App = () => (
   <ApolloProvider client={client}>
@@ -32,7 +16,6 @@ const App = () => (
       </MuiThemeProvider>
     </ApolloHooksProvider>
   </ApolloProvider>
-
 )
 
 export default App

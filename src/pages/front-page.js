@@ -3,27 +3,42 @@ import Header from '../components/header'
 import AddSong from '../components/song/add-song'
 import SongList from '../components/song/song-list'
 import SongPlayer from '../components/song/song-player'
-import { Grid, makeStyles } from '@material-ui/core'
-
-const useStyles = makeStyles(theme => ({
-  grid: {
-    paddingTop: theme.spacing(10),
-  }
-}))
+import { Grid, useMediaQuery, Hidden } from '@material-ui/core'
 
 const FrontPage = () => {
-  const classes = useStyles()
+  const greaterThanSm = useMediaQuery(theme => theme.breakpoints.up('sm'))
+  const greaterThanMd = useMediaQuery(theme => theme.breakpoints.up('md'))
+
   return (
     <div>
-      <Header/>
+      <Hidden only='xs'>
+        <Header/>
+      </Hidden>
       <Grid container spacing={3}>
         <Grid style={{
-          paddingTop: 80
+          paddingTop: greaterThanSm ? 80 : 20,
         }} item xs={12} md={7}>
           <AddSong/>
           <SongList/>
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid style={
+          greaterThanMd
+            ? {
+              position: 'fixed',
+              width: '100%',
+              right: 0,
+              top: 70,
+            }
+            : {
+              position: 'fixed',
+              width: '100%',
+              left: 0,
+              bottom: 0,
+            }}
+              item
+              xs={12}
+              md={5}
+        >
           <SongPlayer/>
         </Grid>
       </Grid>

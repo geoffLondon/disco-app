@@ -10,6 +10,8 @@ import {
 import Card from '@material-ui/core/Card'
 import CardActions from '@material-ui/core/CardActions'
 import { PlayArrow, Save } from '@material-ui/icons'
+import { useQuery } from 'react-apollo-hooks'
+import { GET_SONGS } from '../../graphql/queries'
 
 const useStyles = makeStyles(theme => ({
   spinner: {
@@ -41,13 +43,13 @@ const useStyles = makeStyles(theme => ({
 
 const SongList = () => {
   const classes = useStyles()
-  let loading = false
+  const { data, loading, error } = useQuery(GET_SONGS)
 
-  const song = {
-    title: 'Purple Rain',
-    artist: 'Prince',
-    thumbnail: 'http://img.youtube.com/vi/--ZtUFsIgMk/0.jpg',
-  }
+  // const song = {
+  //   title: 'Purple Rain',
+  //   artist: 'Prince',
+  //   thumbnail: 'http://i3.ytimg.com/vi/TvnYmWpD_T8/hqdefault.jpg',
+  // }
 
   if (loading) {
     return (
@@ -56,10 +58,11 @@ const SongList = () => {
       </div>
     )
   }
+  if (error) return <div>Error fetching songs!</div>
   return (
     <div>
-      {Array.from({ length: 10 }, () => song).map((song, i) => (
-        <Song key={i} song={song}/>
+      {data.songs.map(song => (
+        <Song key={song.id} song={song}/>
       ))}
     </div>
   )
