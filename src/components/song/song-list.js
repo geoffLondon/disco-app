@@ -10,8 +10,8 @@ import {
 import Card from '@material-ui/core/Card'
 import CardActions from '@material-ui/core/CardActions'
 import { PlayArrow, Save } from '@material-ui/icons'
-import { useQuery } from 'react-apollo-hooks'
-import { GET_SONGS } from '../../graphql/queries'
+import { useSubscription } from 'react-apollo-hooks'
+import { GET_SONGS } from '../../graphql/subscription'
 
 const useStyles = makeStyles(theme => ({
   spinner: {
@@ -43,13 +43,7 @@ const useStyles = makeStyles(theme => ({
 
 const SongList = () => {
   const classes = useStyles()
-  const { data, loading, error } = useQuery(GET_SONGS)
-
-  // const song = {
-  //   title: 'Purple Rain',
-  //   artist: 'Prince',
-  //   thumbnail: 'http://i3.ytimg.com/vi/TvnYmWpD_T8/hqdefault.jpg',
-  // }
+  const { data, loading, error } = useSubscription(GET_SONGS)
 
   if (loading) {
     return (

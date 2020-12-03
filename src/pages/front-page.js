@@ -1,16 +1,31 @@
-import React from 'react'
+import React, { createContext, useContext, useReducer } from 'react'
 import Header from '../components/header'
 import AddSong from '../components/song/add-song'
 import SongList from '../components/song/song-list'
 import SongPlayer from '../components/song/song-player'
 import { Grid, useMediaQuery, Hidden } from '@material-ui/core'
+import songReducer from '../reducer'
+
+export const SongContext = createContext({
+  song: {
+    id: 'e2d4be0f-4cf6-4f70-b2d5-61879d66af03',
+    title: 'Deep House Mix',
+    artist: 'Mr Gand',
+    thumbnail: 'http://img.youtube.com/vi/fLH5sQAiHHg/0.jpg\n',
+    duration: '3601',
+    url: 'https://www.youtube.com/watch?v=fLH5sQAiHHg\n'
+  },
+  isPlaying: false,
+})
 
 const FrontPage = () => {
+  const initialSongState = useContext(SongContext)
+  const [state, dispatch] = useReducer(songReducer, initialSongState)
   const greaterThanSm = useMediaQuery(theme => theme.breakpoints.up('sm'))
   const greaterThanMd = useMediaQuery(theme => theme.breakpoints.up('md'))
 
   return (
-    <div>
+    <SongContext.Provider value={{ state, dispatch }}>
       <Hidden only='xs'>
         <Header/>
       </Hidden>
@@ -42,7 +57,7 @@ const FrontPage = () => {
           <SongPlayer/>
         </Grid>
       </Grid>
-    </div>
+    </SongContext.Provider>
   )
 }
 

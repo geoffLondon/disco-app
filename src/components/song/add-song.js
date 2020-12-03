@@ -14,7 +14,7 @@ import ReactPlayer from 'react-player'
 import SoundcloudPlayer from 'react-player/lib/players/SoundCloud'
 import YoutubePlayer from 'react-player/lib/players/YouTube'
 import { useMutation } from 'react-apollo-hooks'
-import { ADD_SONG } from '../../graphql/mutations'
+import { ADD_SONG } from '../../graphql/mutation'
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -126,6 +126,10 @@ const AddSong = () => {
     })
   }
 
+  function handleError(field) {
+    return error?.graphQLErrors[0]?.extensions?.path.includes(field)
+  }
+
   const { thumbnail, title, artist } = song
 
   return (
@@ -149,6 +153,8 @@ const AddSong = () => {
             name='title'
             label='Title'
             fullWidth
+            error={handleError('title')}
+            helperText={handleError('title') && 'Fill out field'}
           />
           <TextField
             onChange={handleChangeSong}
@@ -157,6 +163,8 @@ const AddSong = () => {
             name='artist'
             label='Artist'
             fullWidth
+            error={handleError('artist')}
+            helperText={handleError('artist') && 'Fill out field'}
           />
           <TextField
             onChange={handleChangeSong}
@@ -165,6 +173,8 @@ const AddSong = () => {
             name='thumbnail'
             label='Thumbnail'
             fullWidth
+            error={handleError('thumbnail')}
+            helperText={handleError('thumbnail') && 'Fill out field'}
           />
         </DialogContent>
         <DialogActions>

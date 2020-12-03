@@ -5,7 +5,7 @@ import { ApolloProvider } from 'react-apollo'
 import Router from './router'
 import theme from './theme'
 import { CssBaseline } from '@material-ui/core'
-import { client } from './graphql/client'
+import client from './graphql/client'
 
 const App = () => (
   <ApolloProvider client={client}>
