@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import QueuedSongList from './queued-song-list'
 import Card from '@material-ui/core/Card'
 import { CardContent, CardMedia, IconButton, Slider, Typography, makeStyles } from '@material-ui/core'
-import { PlayArrow, SkipNext, SkipPrevious } from '@material-ui/icons'
+import { Pause, PlayArrow, SkipNext, SkipPrevious } from '@material-ui/icons'
+import { SongContext } from '../../pages/front-page'
+import { useQuery } from 'react-apollo-hooks'
+import { GET_QUEUED_SONGS } from '../../graphql/query'
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -31,26 +34,34 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
+
 const SongPlayer = () => {
+  const { data } = useQuery(GET_QUEUED_SONGS)
+  const { state, dispatch } = useContext(SongContext)
   const classes = useStyles()
+
+  function handleTogglePlay() {
+    dispatch(state.isPlaying ? {type: 'PAUSE_SONG'} : { type: 'PLAY_SONG' })
+  }
+
   return (
     <>
       <Card variant='outlined' className={classes.container}>
         <div className={classes.details}>
           <CardContent className={classes.content}>
             <Typography variant='h5' component='h3'>
-              Title
+              {state.song.title}
             </Typography>
             <Typography variant='subtitle1' component='p' color='textSecondary'>
-              Artist
+              {state.song.artist}
             </Typography>
           </CardContent>
           <div className={classes.controls}>
             <IconButton>
               <SkipPrevious/>
             </IconButton>
-            <IconButton className={classes.playIcon}>
-              <PlayArrow/>
+            <IconButton onClick={handleTogglePlay}>
+              {state.isPlaying ?  <Pause className={classes.playIcon}/> : <PlayArrow className={classes.playIcon}/>}
             </IconButton>
             <IconButton>
               <SkipNext/>
@@ -68,10 +79,10 @@ const SongPlayer = () => {
         </div>
         <CardMedia
           className={classes.thumbnail}
-          image='http://img.youtube.com/vi/--ZtUFsIgMk/0.jpg'
+          image={state.song.thumbnail}
         />
       </Card>
-      <QueuedSongList/>
+      <QueuedSongList queue={data.queue}/>
     </>
   )
 }

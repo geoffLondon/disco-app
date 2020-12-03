@@ -31,7 +31,8 @@ const useStyles = makeStyles({
   },
 })
 
-const QueuedSongList = () => {
+const QueuedSongList = ({ queue }) => {
+  console.log({ queue })
   const greaterThanMd = useMediaQuery(theme => theme.breakpoints.up('md'))
 
   const song = {

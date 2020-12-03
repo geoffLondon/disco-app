@@ -1,17 +1,19 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {
   makeStyles,
   CircularProgress,
   CardMedia,
   CardContent,
   Typography,
-  IconButton
+  IconButton,
 } from '@material-ui/core'
 import Card from '@material-ui/core/Card'
 import CardActions from '@material-ui/core/CardActions'
-import { PlayArrow, Save } from '@material-ui/icons'
-import { useSubscription } from 'react-apollo-hooks'
+import { Pause, PlayArrow, Save } from '@material-ui/icons'
+import { useMutation, useSubscription } from 'react-apollo-hooks'
 import { GET_SONGS } from '../../graphql/subscription'
+import { SongContext } from '../../pages/front-page'
+import { ADD_OR_REMOVE_FROM_QUEUE } from '../../graphql/mutation'
 
 const useStyles = makeStyles(theme => ({
   spinner: {
@@ -21,25 +23,23 @@ const useStyles = makeStyles(theme => ({
     marginTop: 50,
   },
   container: {
-    margin: theme.spacing(3)
+    margin: theme.spacing(3),
   },
   songInfoContainer: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   songInfo: {
     width: '100%',
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   thumbnail: {
     objectFit: 'cover',
     width: 140,
-    height: 140
-  }
+    height: 140,
+  },
 }))
-
-
 
 const SongList = () => {
   const classes = useStyles()
@@ -63,8 +63,28 @@ const SongList = () => {
 }
 
 function Song ({ song }) {
+  const { id } = song
   const classes = useStyles()
+  const [addOrRemoveFromQueue] = useMutation(ADD_OR_REMOVE_FROM_QUEUE)
+  const { state, dispatch } = useContext(SongContext)
+  const [currentSongPlaying, setCurrentSongPlaying] = useState(false)
   const { title, artist, thumbnail } = song
+
+  useEffect(() => {
+    const isSongPlaying = state.isPlaying && id === state.song.id
+    setCurrentSongPlaying(isSongPlaying)
+  }, [id, state.song.id, state.isPlaying])
+
+  function handleTogglePlay () {
+    dispatch({ type: 'SET_SONG', payload: { song } })
+    dispatch(state.isPlaying ? { type: 'PAUSE_SONG' } : { type: 'PLAY_SONG' })
+  }
+
+  function handleAddOrRemoveFromQueue () {
+    addOrRemoveFromQueue({
+      variables: { input: { ...song, __typename: 'Song' }}
+    })
+  }
 
   return <Card className={classes.container}>
     <div className={classes.songInfoContainer}>
@@ -80,11 +100,11 @@ function Song ({ song }) {
         </CardContent>
       </div>
       <CardActions>
-        <IconButton size='small' color='primary'>
-          <PlayArrow/>
+        <IconButton onClick={handleTogglePlay} size='small' color='primary'>
+          {currentSongPlaying ? <Pause/> : <PlayArrow/>}
         </IconButton>
-        <IconButton size='small' color='secondary'>
-          <Save />
+        <IconButton onClick={handleAddOrRemoveFromQueue} size='small' color='secondary'>
+          <Save/>
         </IconButton>
       </CardActions>
     </div>
