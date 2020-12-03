@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8636478-80f9-4575-bf3e-80f8fd795f1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/graphql/client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphql/queries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphql/mutations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/song/queued-song-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/queued-song-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/song/song-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/song-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/song/song-player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/song-player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/front-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/front-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/song/add-song.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/add-song.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +81,7 @@
       <workItem from="1606502953380" duration="22948000" />
       <workItem from="1606761162970" duration="7399000" />
       <workItem from="1606836928189" duration="13000" />
-      <workItem from="1606852701497" duration="2642000" />
+      <workItem from="1606852701497" duration="9884000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1606503125205</created>
@@ -139,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606726661082</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added Graphql endpoint and first query.">
+      <created>1606856401370</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1606856401370</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +154,7 @@
     <MESSAGE value="Setup initial Grid layout." />
     <MESSAGE value="Setup appbar, theme." />
     <MESSAGE value="Added stying to song-list and add-song." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added stying to song-list and add-song." />
+    <MESSAGE value="Added Graphql endpoint and first query." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Graphql endpoint and first query." />
   </component>
 </project>
