@@ -65,7 +65,11 @@ const SongList = () => {
 function Song ({ song }) {
   const { id } = song
   const classes = useStyles()
-  const [addOrRemoveFromQueue] = useMutation(ADD_OR_REMOVE_FROM_QUEUE)
+  const [addOrRemoveFromQueue] = useMutation(ADD_OR_REMOVE_FROM_QUEUE, {
+    onCompleted: data => {
+     localStorage.setItem('queue', JSON.stringify(data.addOrRemoveFromQueue))
+    }
+  })
   const { state, dispatch } = useContext(SongContext)
   const [currentSongPlaying, setCurrentSongPlaying] = useState(false)
   const { title, artist, thumbnail } = song
@@ -86,7 +90,8 @@ function Song ({ song }) {
     })
   }
 
-  return <Card className={classes.container}>
+  return (
+    <Card className={classes.container}>
     <div className={classes.songInfoContainer}>
       <CardMedia image={thumbnail} className={classes.thumbnail}/>
       <div className={classes.songInfo}>
@@ -109,6 +114,7 @@ function Song ({ song }) {
       </CardActions>
     </div>
   </Card>
+  )
 }
 
 export default SongList

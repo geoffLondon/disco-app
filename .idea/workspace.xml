@@ -4,8 +4,13 @@
     <list default="true" id="b8636478-80f9-4575-bf3e-80f8fd795f1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/song/queued-song-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/queued-song-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/song/song-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/song-list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphql/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphql/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/theme.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +60,8 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/theme" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/components/song" />
     </key>
   </component>
@@ -84,6 +89,7 @@
       <workItem from="1606852701497" duration="9884000" />
       <workItem from="1606983907734" duration="2076000" />
       <workItem from="1607022792444" duration="9751000" />
+      <workItem from="1607091472033" duration="8544000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1606503125205</created>
@@ -162,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607030086266</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Saving songs in song list.">
+      <created>1607091687899</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1607091687899</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +194,7 @@
     <MESSAGE value="Added Graphql mutation." />
     <MESSAGE value="Added Graphql subscription. Updates add song on the fly." />
     <MESSAGE value="Added local caching functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added local caching functionality." />
+    <MESSAGE value="Saving songs in song list." />
+    <option name="LAST_COMMIT_MESSAGE" value="Saving songs in song list." />
   </component>
 </project>

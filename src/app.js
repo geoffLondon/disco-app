@@ -3,7 +3,7 @@ import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
 import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks'
 import { ApolloProvider } from 'react-apollo'
 import Router from './router'
-import theme from './theme'
+import theme from './theme/theme'
 import { CssBaseline } from '@material-ui/core'
 import client from './graphql/client'
 
