@@ -5,13 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/song/queued-song-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/queued-song-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/song/song-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/song-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/song/song-player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/song-player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphql/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphql/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphql/mutation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphql/mutation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphql/query.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphql/query.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/front-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/front-page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +83,7 @@
       <workItem from="1606836928189" duration="13000" />
       <workItem from="1606852701497" duration="9884000" />
       <workItem from="1606983907734" duration="2076000" />
-      <workItem from="1607022792444" duration="6809000" />
+      <workItem from="1607022792444" duration="9751000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1606503125205</created>
@@ -161,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607025371458</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added local caching functionality.">
+      <created>1607030086266</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1607030086266</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +180,7 @@
     <MESSAGE value="Added Graphql endpoint and first query." />
     <MESSAGE value="Added Graphql mutation." />
     <MESSAGE value="Added Graphql subscription. Updates add song on the fly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Graphql subscription. Updates add song on the fly." />
+    <MESSAGE value="Added local caching functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added local caching functionality." />
   </component>
 </project>
