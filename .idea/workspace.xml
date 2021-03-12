@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8636478-80f9-4575-bf3e-80f8fd795f1d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/song/queued-song-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/queued-song-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/front-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/front-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +87,7 @@
       <workItem from="1610917786683" duration="4000" />
       <workItem from="1611847040334" duration="1769000" />
       <workItem from="1611956679510" duration="1373000" />
-      <workItem from="1615553305971" duration="2114000" />
+      <workItem from="1615553305971" duration="2527000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1606503125205</created>
@@ -190,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607116839771</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Set default song with my name as artist.">
+      <created>1615560540530</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1615560540530</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +216,7 @@
     <MESSAGE value="Saving songs in song list." />
     <MESSAGE value="Trying to get local storage working." />
     <MESSAGE value="Improved slider and next song functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved slider and next song functionality." />
+    <MESSAGE value="Set default song with my name as artist." />
+    <option name="LAST_COMMIT_MESSAGE" value="Set default song with my name as artist." />
   </component>
 </project>
