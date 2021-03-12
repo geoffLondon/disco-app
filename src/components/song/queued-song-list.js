@@ -39,7 +39,7 @@ const QueuedSongList = ({ queue }) => {
   return greaterThanMd && (
     <div style={{ margin: '10px 0' }}>
       <Typography color='textSecondary' variant='button'>
-        QUEUE ({ queue.length })
+        PLAYLIST ({ queue.length })
       </Typography>
       {queue.map((song, i) => (
         <QueuedSong key={i} song={song}/>

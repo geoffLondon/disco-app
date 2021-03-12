@@ -9,8 +9,8 @@ import songReducer from '../reducer'
 export const SongContext = createContext({
   song: {
     id: 'e2d4be0f-4cf6-4f70-b2d5-61879d66af03',
-    title: 'Deep House Mix',
-    artist: 'Mr Gand',
+    title: 'Disco Music Player',
+    artist: 'Geoff Griffiths',
     thumbnail: 'http://img.youtube.com/vi/fLH5sQAiHHg/0.jpg',
     duration: '3601',
     url: 'https://www.youtube.com/watch?v=fLH5sQAiHHg'
